@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Olhoten Apps - Learn about our game and app development studio for iOS and Android.">
+    <title>About Us - Olhoten Apps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-indigo-600">Olhoten Apps</a>
+                <button id="menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <ul id="menu" class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-gray-600 hover:text-indigo-600 transition">Home</a></li>
+                    <li><a href="about.html" class="text-indigo-600 font-medium">About</a></li>
+                    <li><a href="contact.html" class="text-gray-600 hover:text-indigo-600 transition">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Mobile menu -->
+            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <li><a href="index.html" class="block py-2 text-gray-600">Home</a></li>
+                <li><a href="about.html" class="block py-2 text-indigo-600 font-medium">About</a></li>
+                <li><a href="contact.html" class="block py-2 text-gray-600">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero -->
+        <section class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-16">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
+                <p class="text-xl text-indigo-100">Learn more about Olhoten Apps and our mission</p>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Who We Are</h2>
+                    <p class="text-gray-600 mb-4">
+                        Olhoten Apps is a mobile development studio dedicated to creating innovative games and applications for iOS and Android. We believe that technology should make life more enjoyable, and every product we develop reflects this philosophy.
+                    </p>
+                    <p class="text-gray-600">
+                        Founded with a passion for mobile technology, we strive to deliver high-quality games and apps that meet the needs of modern users. Our team combines technical expertise with creative design to build products that are both fun and beautiful.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+                    <p class="text-gray-600">
+                        Our mission is to develop games and apps that enhance everyday life. We focus on creating intuitive, engaging, and polished products for iOS and Android that provide genuine value to our users. We are committed to continuous improvement and staying at the forefront of mobile technology.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Our Values</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-1">Quality</h3>
+                                <p class="text-gray-600 text-sm">We deliver polished, bug-free applications that exceed expectations.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-1">Privacy</h3>
+                                <p class="text-gray-600 text-sm">User privacy is paramount. We collect only what's necessary.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-1">Innovation</h3>
+                                <p class="text-gray-600 text-sm">We embrace new technologies and creative solutions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-1">User Focus</h3>
+                                <p class="text-gray-600 text-sm">Everything we build is designed with the end user in mind.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold">Olhoten Apps</span>
+                    <p class="text-gray-400 text-sm mt-1">Games & Apps for iOS and Android</p>
+                </div>
+                <ul class="flex space-x-6 text-sm">
+                    <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Olhoten Apps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

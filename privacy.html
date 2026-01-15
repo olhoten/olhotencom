@@ -46,7 +46,7 @@
         <section class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-16">
             <div class="max-w-6xl mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-                <p class="text-xl text-indigo-100">Version 1.0 | Last Updated: January 5, 2026</p>
+                <p class="text-xl text-indigo-100">Version 1.1 | Last Updated: January 15, 2026</p>
             </div>
         </section>
 
@@ -106,7 +106,7 @@
                                 <tr><td>Core app functionality</td><td>Contract (necessary to provide service)</td><td>No</td></tr>
                                 <tr><td>Saving app progress</td><td>Contract</td><td>No</td></tr>
                                 <tr><td>Processing purchases</td><td>Contract</td><td>No</td></tr>
-                                <tr><td>Crash reporting</td><td>Legitimate Interest (app stability)</td><td>Yes*</td></tr>
+                                <tr><td>Crash reporting</td><td>Consent (linked to Analytics)</td><td>Yes</td></tr>
                                 <tr><td>Security and fraud prevention</td><td>Legitimate Interest</td><td>Yes*</td></tr>
                                 <tr><td>Analytics</td><td>Consent</td><td>Yes</td></tr>
                                 <tr><td>Personalized advertising</td><td>Consent</td><td>Yes</td></tr>
@@ -138,7 +138,7 @@
                                 <tr><td>Device Information</td><td>Device model, OS version, unique device identifiers</td><td>App functionality, crash reporting</td><td>Contract / Legitimate Interest</td></tr>
                                 <tr><td>App Usage Data</td><td>Scores, progress, features used, session duration</td><td>Analytics, app improvement</td><td>Consent</td></tr>
                                 <tr><td>App Progress</td><td>Achievements, in-app currency balance, preferences</td><td>Core functionality, cloud sync</td><td>Contract</td></tr>
-                                <tr><td>Crash Data</td><td>Crash logs, error reports, diagnostic data</td><td>Bug fixing, stability improvement</td><td>Legitimate Interest</td></tr>
+                                <tr><td>Crash Data</td><td>Crash logs, error reports, diagnostic data</td><td>Bug fixing, stability improvement</td><td>Consent (linked to Analytics)</td></tr>
                                 <tr><td>Advertising Data</td><td>Ad interactions, ad views, advertising identifiers</td><td>Displaying relevant ads</td><td>Consent</td></tr>
                                 <tr><td>Attribution Data</td><td>Install source, campaign data, conversion events</td><td>Marketing analytics</td><td>Consent</td></tr>
                                 <tr><td>Purchase Data</td><td>Transaction history, purchase timestamps</td><td>Processing in-app purchases</td><td>Contract</td></tr>
@@ -177,12 +177,15 @@
                         <li>A/B testing new features</li>
                     </ul>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.3 Security and Stability (Legal Basis: Legitimate Interest)</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.3 Security and Stability (Legal Basis: Consent / Legitimate Interest)</h3>
                     <ul class="list-disc list-inside text-gray-600 mb-4">
                         <li>Identifying and fixing bugs and crashes</li>
                         <li>Preventing fraud and abuse</li>
                         <li>Ensuring app security and integrity</li>
                     </ul>
+                    <p class="text-gray-600 mb-4">
+                        <strong>Note:</strong> Crash reports are included with Analytics consent. If you disable Analytics, crash reporting is also disabled. This means we will not receive crash reports from your device if you opt out of Analytics.
+                    </p>
 
                     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.4 Advertising (Legal Basis: Consent)</h3>
                     <ul class="list-disc list-inside text-gray-600 mb-4">
@@ -217,7 +220,7 @@
                             </thead>
                             <tbody>
                                 <tr><td>Firebase Analytics</td><td>App usage events, device info, user properties</td><td>Analytics</td></tr>
-                                <tr><td>Firebase Crashlytics</td><td>Crash reports, device info, app state</td><td>Crash reporting</td></tr>
+                                <tr><td>Firebase Crashlytics</td><td>Crash reports, device info, app state</td><td>Crash reporting (linked to Analytics consent)</td></tr>
                                 <tr><td>Cloud Firestore</td><td>App progress data</td><td>Cloud save sync</td></tr>
                                 <tr><td>Firebase Cloud Messaging</td><td>Push notification tokens</td><td>Push notifications</td></tr>
                                 <tr><td>Firebase Remote Config</td><td>App configuration data</td><td>Feature management</td></tr>
@@ -420,7 +423,7 @@
                             This Privacy Policy complies with GDPR, CCPA/CPRA, COPPA, LGPD, and other applicable privacy regulations.
                         </p>
                         <p class="text-gray-500 text-sm text-center mt-2">
-                            <strong>Version:</strong> 1.0 | <strong>Effective Date:</strong> January 5, 2026
+                            <strong>Version:</strong> 1.1 | <strong>Effective Date:</strong> January 15, 2026
                         </p>
                     </div>
 

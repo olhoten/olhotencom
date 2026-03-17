@@ -46,7 +46,7 @@
         <section class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-16">
             <div class="max-w-6xl mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-                <p class="text-xl text-indigo-100">Version 1.1 | Last Updated: January 15, 2026</p>
+                <p class="text-xl text-indigo-100">Version 1.2 | Last Updated: March 17, 2026</p>
             </div>
         </section>
 
@@ -137,7 +137,7 @@
                             <tbody>
                                 <tr><td>Device Information</td><td>Device model, OS version, unique device identifiers</td><td>App functionality, crash reporting</td><td>Contract / Legitimate Interest</td></tr>
                                 <tr><td>App Usage Data</td><td>Scores, progress, features used, session duration</td><td>Analytics, app improvement</td><td>Consent</td></tr>
-                                <tr><td>App Progress</td><td>Achievements, in-app currency balance, preferences</td><td>Core functionality, cloud sync</td><td>Contract</td></tr>
+                                <tr><td>App Progress</td><td>Achievements, in-app currency balance, preferences</td><td>Core functionality</td><td>Contract</td></tr>
                                 <tr><td>Crash Data</td><td>Crash logs, error reports, diagnostic data</td><td>Bug fixing, stability improvement</td><td>Consent (linked to Analytics)</td></tr>
                                 <tr><td>Advertising Data</td><td>Ad interactions, ad views, advertising identifiers</td><td>Displaying relevant ads</td><td>Consent</td></tr>
                                 <tr><td>Attribution Data</td><td>Install source, campaign data, conversion events</td><td>Marketing analytics</td><td>Consent</td></tr>
@@ -164,7 +164,7 @@
                     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.1 Core App Functionality (Legal Basis: Contract)</h3>
                     <ul class="list-disc list-inside text-gray-600 mb-4">
                         <li>Providing app features and functionality</li>
-                        <li>Saving and synchronizing your progress</li>
+                        <li>Saving your progress locally on device</li>
                         <li>Processing in-app purchases</li>
                         <li>Managing your preferences</li>
                     </ul>
@@ -219,11 +219,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>Firebase Analytics</td><td>App usage events, device info, user properties</td><td>Analytics</td></tr>
-                                <tr><td>Firebase Crashlytics</td><td>Crash reports, device info, app state</td><td>Crash reporting (linked to Analytics consent)</td></tr>
-                                <tr><td>Cloud Firestore</td><td>App progress data</td><td>Cloud save sync</td></tr>
-                                <tr><td>Firebase Cloud Messaging</td><td>Push notification tokens</td><td>Push notifications</td></tr>
-                                <tr><td>Firebase Remote Config</td><td>App configuration data</td><td>Feature management</td></tr>
+                                <tr><td>Firebase Analytics</td><td>App usage events, device info, user properties, app instance ID</td><td>Analytics</td></tr>
+                                <tr><td>Firebase Crashlytics</td><td>Crash reports, stack traces, device info, app state, custom diagnostic keys</td><td>Crash reporting (linked to Analytics consent)</td></tr>
+                                <tr><td>Firebase Cloud Messaging</td><td>Push notification tokens (FCM token)</td><td>Push notifications</td></tr>
+                                <tr><td>Firebase Remote Config</td><td>App instance ID, country, language</td><td>Feature flags, A/B testing</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -231,22 +230,57 @@
                         <strong>Firebase Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" class="text-indigo-600 hover:text-indigo-700" target="_blank">firebase.google.com/support/privacy</a>
                     </p>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.2 RevenueCat</h3>
-                    <p class="text-gray-600 mb-4">Handles in-app purchase processing and subscription management.</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.2 Google Play Billing / Apple StoreKit (In-App Purchases)</h3>
+                    <p class="text-gray-600 mb-4">In-app purchases are processed natively through Google Play Billing (Android) and Apple StoreKit (iOS). Purchase transactions are handled directly by the platform. We store purchase records locally on the device for purchase restoration purposes.</p>
                     <p class="text-gray-600 mb-4">
-                        <strong>RevenueCat Privacy Policy:</strong> <a href="https://www.revenuecat.com/privacy" class="text-indigo-600 hover:text-indigo-700" target="_blank">revenuecat.com/privacy</a>
+                        <strong>Google Play Privacy:</strong> <a href="https://policies.google.com/privacy" class="text-indigo-600 hover:text-indigo-700" target="_blank">policies.google.com/privacy</a><br>
+                        <strong>Apple Privacy:</strong> <a href="https://www.apple.com/legal/privacy/" class="text-indigo-600 hover:text-indigo-700" target="_blank">apple.com/legal/privacy</a>
                     </p>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.3 AppLovin MAX (Advertising)</h3>
-                    <p class="text-gray-600 mb-4">Ad mediation platform that may serve ads from multiple advertising networks. <strong>We request your consent before collecting data for personalized advertising.</strong></p>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.3 Unity LevelPlay / ironSource (Advertising)</h3>
+                    <p class="text-gray-600 mb-4">Ad mediation platform that may serve ads from multiple advertising networks. Collects advertising identifiers and device information for ad serving and measurement. <strong>We request your consent before collecting data for personalized advertising.</strong></p>
+                    <div class="overflow-x-auto mb-4">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Data Collected</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Advertising ID (GAID/IDFA)</td><td>Ad targeting and frequency capping</td></tr>
+                                <tr><td>Device information (model, OS, screen size)</td><td>Ad rendering and compatibility</td></tr>
+                                <tr><td>Ad interaction data (impressions, clicks, completions)</td><td>Ad performance measurement</td></tr>
+                                <tr><td>Impression-level revenue data (ILRD)</td><td>Revenue analytics</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <p class="text-gray-600 mb-4">
-                        <strong>AppLovin Privacy Policy:</strong> <a href="https://www.applovin.com/privacy/" class="text-indigo-600 hover:text-indigo-700" target="_blank">applovin.com/privacy</a>
+                        <strong>Unity Privacy Policy:</strong> <a href="https://unity.com/legal/privacy-policy" class="text-indigo-600 hover:text-indigo-700" target="_blank">unity.com/legal/privacy-policy</a><br>
+                        <strong>ironSource Privacy Policy:</strong> <a href="https://developers.is.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/" class="text-indigo-600 hover:text-indigo-700" target="_blank">developers.is.com/ironsource-mobile/air/ironsource-mobile-privacy-policy</a>
                     </p>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.4 AppsFlyer (Attribution & Analytics)</h3>
-                    <p class="text-gray-600 mb-4">Helps us understand how users discover our Apps and measure the effectiveness of marketing campaigns.</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.4 GameAnalytics (Game Analytics)</h3>
+                    <p class="text-gray-600 mb-4">Provides game-specific analytics including player progression funnels, retention analysis, and in-game economy tracking. Helps us understand gameplay patterns and improve game balance.</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Data Collected</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Device identifiers</td><td>User session tracking</td></tr>
+                                <tr><td>Game progression events (levels, scores)</td><td>Progression funnel analysis</td></tr>
+                                <tr><td>In-game economy events (currency earned/spent)</td><td>Economy balancing</td></tr>
+                                <tr><td>Business events (IAP purchases)</td><td>Revenue analytics</td></tr>
+                                <tr><td>Error events</td><td>Stability monitoring</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <p class="text-gray-600 mb-4">
-                        <strong>AppsFlyer Privacy Policy:</strong> <a href="https://www.appsflyer.com/legal/privacy-policy/" class="text-indigo-600 hover:text-indigo-700" target="_blank">appsflyer.com/legal/privacy-policy</a>
+                        <strong>GameAnalytics Privacy Policy:</strong> <a href="https://gameanalytics.com/privacy/" class="text-indigo-600 hover:text-indigo-700" target="_blank">gameanalytics.com/privacy</a>
                     </p>
 
                     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.5 Data Sharing Summary</h3>
@@ -273,12 +307,12 @@
                             </thead>
                             <tbody>
                                 <tr><td>App progress (local)</td><td>Until you delete the App or clear data</td><td>Device settings or uninstall</td></tr>
-                                <tr><td>App progress (cloud)</td><td>Until you delete your account or request deletion</td><td>In-app account deletion</td></tr>
-                                <tr><td>Analytics data</td><td>14 months (Firebase default)</td><td>Automatic expiration</td></tr>
+                                <tr><td>Firebase Analytics data</td><td>14 months (Firebase default)</td><td>Automatic expiration</td></tr>
+                                <tr><td>GameAnalytics data</td><td>6 months</td><td>Automatic expiration</td></tr>
                                 <tr><td>Crash reports</td><td>90 days</td><td>Automatic expiration</td></tr>
                                 <tr><td>Purchase records</td><td>As required by law (typically 7 years)</td><td>Legal retention requirement</td></tr>
                                 <tr><td>Push notification tokens</td><td>Until you disable notifications or delete the App</td><td>Device settings</td></tr>
-                                <tr><td>Attribution data</td><td>24 months maximum</td><td>Automatic expiration</td></tr>
+                                <tr><td>Advertising data</td><td>Per ad partner retention policies</td><td>See Unity/ironSource privacy policy</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -298,7 +332,6 @@
                             <tbody>
                                 <tr><td><strong>Access</strong> your data</td><td>Settings > Privacy or contact us</td></tr>
                                 <tr><td><strong>Delete</strong> local data</td><td>Device Settings > Apps > Clear Data or uninstall</td></tr>
-                                <tr><td><strong>Delete</strong> cloud data</td><td>Settings > Account > Delete Account and Data</td></tr>
                                 <tr><td><strong>Opt-out</strong> of analytics</td><td>Settings > Privacy > toggle off Analytics</td></tr>
                                 <tr><td><strong>Opt-out</strong> of attribution</td><td>Settings > Privacy > toggle off Attribution</td></tr>
                                 <tr><td><strong>Opt-out</strong> of personalized ads</td><td>Settings > Privacy > toggle off Personalized Ads</td></tr>
@@ -347,8 +380,8 @@
                     <p class="text-gray-600 mb-4">We implement appropriate technical and organizational measures to protect your information:</p>
                     <ul class="list-disc list-inside text-gray-600 mb-4">
                         <li><strong>Encryption in Transit:</strong> All data transmitted using TLS 1.2+ encryption</li>
-                        <li><strong>Encryption at Rest:</strong> Cloud data stored in encrypted Firebase databases (AES-256)</li>
-                        <li><strong>Secure APIs:</strong> API calls authenticated and encrypted</li>
+                        <li><strong>Encryption at Rest:</strong> Local data stored on device using platform-standard storage</li>
+                        <li><strong>Secure APIs:</strong> All third-party service communications authenticated and encrypted</li>
                         <li><strong>Access Controls:</strong> Limited access to user data on need-to-know basis</li>
                     </ul>
                     <p class="text-gray-600 mb-6">
@@ -362,7 +395,7 @@
 
                     <!-- Section 10 -->
                     <h2 class="text-2xl font-bold text-gray-800 mb-4 mt-10">10. Advertising and Tracking</h2>
-                    <p class="text-gray-600 mb-4">Non-premium users see advertisements in our Apps served through AppLovin MAX.</p>
+                    <p class="text-gray-600 mb-4">Non-premium users see advertisements in our Apps served through Unity LevelPlay (ironSource).</p>
                     <p class="text-gray-600 mb-4"><strong>Ad personalization:</strong></p>
                     <ul class="list-disc list-inside text-gray-600 mb-4">
                         <li><strong>With consent:</strong> We show personalized ads based on your interests</li>
@@ -423,7 +456,7 @@
                             This Privacy Policy complies with GDPR, CCPA/CPRA, COPPA, LGPD, and other applicable privacy regulations.
                         </p>
                         <p class="text-gray-500 text-sm text-center mt-2">
-                            <strong>Version:</strong> 1.1 | <strong>Effective Date:</strong> January 15, 2026
+                            <strong>Version:</strong> 1.2 | <strong>Effective Date:</strong> March 17, 2026
                         </p>
                     </div>
 

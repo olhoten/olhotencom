@@ -187,3 +187,6 @@ prado.co, 15648, RESELLER
 loopme.com, 10287, RESELLER, 6c8d5f95897a5a3b
 triplelift.com, 12158, RESELLER, 6c33edb13117fd86
 thunder-monetize.com, 3692155372, RESELLER
+
+# Meta Audience Network
+facebook.com, 1474089700871763, DIRECT, c3e20eee3f780d68

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const message = document.getElementById('message').value;
 
             // Create mailto link
-            const mailtoLink = `mailto:support@olhoten.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+            const mailtoLink = `mailto:olhoten.apps@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
 
             // Open email client
             window.location.href = mailtoLink;

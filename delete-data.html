@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to delete your data from Olhoten Apps games - in-app deletion and data deletion requests.">
+    <title>Data Deletion - Olhoten Apps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-indigo-600">Olhoten Apps</a>
+                <button id="menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <ul id="menu" class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-gray-600 hover:text-indigo-600 transition">Home</a></li>
+                    <li><a href="index.html#games" class="text-gray-600 hover:text-indigo-600 transition">Games</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-indigo-600 transition">About</a></li>
+                    <li><a href="contact.html" class="text-gray-600 hover:text-indigo-600 transition">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Mobile menu -->
+            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <li><a href="index.html" class="block py-2 text-gray-600">Home</a></li>
+                <li><a href="index.html#games" class="block py-2 text-gray-600">Games</a></li>
+                <li><a href="about.html" class="block py-2 text-gray-600">About</a></li>
+                <li><a href="contact.html" class="block py-2 text-gray-600">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero -->
+        <section class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-16">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Data Deletion</h1>
+                <p class="text-xl text-indigo-100">How to delete your data from our games</p>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4">
+
+                <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                    <p class="text-gray-600 mb-4">
+                        This page explains how to delete the data associated with you in games published by
+                        <strong>Olhoten Apps</strong> (developer account on Google Play), including
+                        <strong>Ten Twins: Number Match Game</strong> (<code class="text-sm bg-gray-100 px-1 rounded">com.olhoten.tentwins</code>).
+                    </p>
+                    <p class="text-gray-600">
+                        Our games do not require an account. Game progress is stored locally on your device, and a limited set of
+                        analytics and advertising data is processed by third-party services as described in our
+                        <a href="privacy.html" class="text-indigo-600 hover:text-indigo-700">Privacy Policy</a>.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Option 1 — Delete Your Data In the App (Recommended)</h2>
+                    <p class="text-gray-600 mb-4">The fastest and most complete way. In the app, go to:</p>
+                    <p class="text-gray-800 font-semibold mb-4 bg-indigo-50 rounded-lg px-4 py-3">Settings &gt; Privacy &gt; Delete my data</p>
+                    <p class="text-gray-600 mb-2">This will:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4 mb-4">
+                        <li>Erase all locally stored game data (progress, scores, settings, virtual currency balance)</li>
+                        <li>Trigger deletion of the data held about your device by our analytics providers, where they offer an erasure API</li>
+                        <li>Reset analytics identifiers and revoke the push notification token</li>
+                        <li>Discard any unsent crash reports</li>
+                    </ul>
+                    <p class="text-gray-600">After deletion, the app returns to its first-launch state. Uninstalling the app afterwards removes everything else stored on the device.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Option 2 — Request Deletion by Email</h2>
+                    <p class="text-gray-600 mb-4">
+                        If you have already uninstalled the app, or cannot use the in-app option, email us and we will handle the deletion
+                        request with our third-party providers on your behalf:
+                    </p>
+                    <p class="text-gray-800 font-semibold mb-4 bg-indigo-50 rounded-lg px-4 py-3">
+                        <a href="mailto:olhoten.apps@gmail.com?subject=Data%20deletion%20request" class="text-indigo-600 hover:text-indigo-700">olhoten.apps@gmail.com</a>
+                        &nbsp;— subject: “Data deletion request”
+                    </p>
+                    <p class="text-gray-600 mb-2">Please include:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4 mb-4">
+                        <li>The game name (e.g., Ten Twins)</li>
+                        <li>Your device model and approximate dates when you used the app</li>
+                        <li>If known, your device advertising ID (Android: Settings &gt; Google &gt; Ads) — this helps locate data held by analytics/advertising services, since we do not operate user accounts</li>
+                    </ul>
+                    <p class="text-gray-600">We respond to deletion requests within <strong>30 days</strong>.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">What Is Deleted, and What May Be Retained</h2>
+                    <div class="overflow-x-auto mt-2">
+                        <table class="min-w-full border border-gray-200 rounded-lg">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-4 py-2 text-left text-gray-700 font-semibold">Data</th>
+                                    <th class="px-4 py-2 text-left text-gray-700 font-semibold">What happens</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t">
+                                    <td class="px-4 py-2 text-gray-600">Game progress, settings, virtual currency (on device)</td>
+                                    <td class="px-4 py-2 text-gray-600">Deleted immediately by the in-app flow or by uninstalling</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="px-4 py-2 text-gray-600">Analytics data (Firebase, GameAnalytics, devtodev)</td>
+                                    <td class="px-4 py-2 text-gray-600">Erasure requested from the provider; removed per provider timelines</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="px-4 py-2 text-gray-600">Crash reports</td>
+                                    <td class="px-4 py-2 text-gray-600">Unsent reports discarded; collection stops</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="px-4 py-2 text-gray-600">Purchase records</td>
+                                    <td class="px-4 py-2 text-gray-600">Retained by Google Play Billing as required for financial/legal compliance (we do not control these)</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="px-4 py-2 text-gray-600">Advertising data held by ad networks</td>
+                                    <td class="px-4 py-2 text-gray-600">Governed by each network's privacy policy; see our <a href="privacy.html" class="text-indigo-600 hover:text-indigo-700">Privacy Policy</a> (Section 4.3) for links</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-gray-600 mt-4">
+                        For full details on the data we process, retention periods, and your rights under GDPR, CCPA, and other privacy laws,
+                        see our <a href="privacy.html" class="text-indigo-600 hover:text-indigo-700">Privacy Policy</a>.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold">Olhoten Apps</span>
+                    <p class="text-gray-400 text-sm mt-1">Games & Apps for iOS and Android</p>
+                </div>
+                <ul class="flex space-x-6 text-sm">
+                    <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                    <li><a href="delete-data.html" class="text-gray-400 hover:text-white transition">Data Deletion</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 Olhoten Apps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

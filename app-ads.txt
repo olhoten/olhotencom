@@ -306,9 +306,6 @@ media.net, 8CU675N41, RESELLER
 video.unrulymedia.com, 703273072, RESELLER
 indexexchange.com, 216401, RESELLER, 50b1c356f2c5c8fc
 
-# Previous Meta Audience Network account
-facebook.com, 1474089700871763, DIRECT, c3e20eee3f780d68
-
 # Current Meta Business Portfolio: Olhoten Apps
 facebook.com, 1741113790242660, DIRECT, c3e20eee3f780d68
 

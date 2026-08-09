@@ -1024,3 +1024,7 @@ programmaticx.ai, 6888889, RESELLER
 contextweb.com, 562329, RESELLER, 89ff185a4c4e857c
 conversantmedia.com, 100669, RESELLER, 03113cd04947736d
 thunder-monetize.com, 2297825074, RESELLER
+
+# Pangle
+pangleglobal.com, 5042530, DIRECT
+pubmatic.com, 161490, RESELLER, 5d62403b186f2ace

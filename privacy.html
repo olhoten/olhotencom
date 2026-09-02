@@ -48,7 +48,7 @@
         <section class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-16">
             <div class="max-w-6xl mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-                <p class="text-xl text-indigo-100">Version 1.4 | Last Updated: July 26, 2026</p>
+                <p class="text-xl text-indigo-100">Version 1.5 | Last Updated: September 3, 2026</p>
             </div>
         </section>
 
@@ -96,9 +96,11 @@
                     <p class="text-gray-600 mb-4"><strong>How consent is collected:</strong></p>
                     <ul class="list-disc list-inside text-gray-600 mb-4">
                         <li><strong>Age attestation:</strong> On first launch you confirm that you are <strong>16 years of age or older</strong> and accept our Terms of Service and this Privacy Policy before any data-collecting service is enabled.</li>
-                        <li><strong>EEA, UK and Switzerland:</strong> Advertising and analytics consent is collected through Google's User Messaging Platform (UMP) using the IAB Transparency &amp; Consent Framework (TCF v2). Your choices are stored as an industry-standard TCF consent string and forwarded to our advertising partners.</li>
-                        <li><strong>United States (California and other states):</strong> Opt-out signals are recorded using the IAB U.S. Privacy String / Global Privacy Platform and honored by our advertising partners.</li>
-                        <li><strong>Consent gating:</strong> All SDKs that collect personal data or device identifiers (analytics, advertising, push notifications) initialize <strong>only after</strong> you have provided the applicable consent. If you decline, these services are not started.</li>
+                        <li><strong>EEA, UK and Switzerland:</strong> Advertising and analytics consent is collected through the <strong>Stack Consent Manager</strong> provided by our advertising mediation partner Appodeal, which is built on Google's <strong>User Messaging Platform (UMP)</strong> and supports the IAB Transparency &amp; Consent Framework (TCF v2). Your choices are stored as an industry-standard TCF consent string and forwarded to every advertising vendor in the applicable TCF vendor list, not only to Google.</li>
+                        <li><strong>iOS (App Tracking Transparency):</strong> On iOS 14.5 and later, Apple's App Tracking Transparency (ATT) prompt is presented before any tracking identifier (IDFA) is accessed. If you decline, the IDFA is not used and you will only see contextual ads.</li>
+                        <li><strong>United States (California and other states):</strong> Opt-out signals are recorded using the IAB U.S. Privacy String / Global Privacy Platform and honored by our advertising partners. You can opt out of the sale/sharing of your personal information at any time via <strong>Settings > Privacy > Do Not Sell or Share My Personal Information</strong> (see Section 6.3).</li>
+                        <li><strong>Consent gating:</strong> Analytics and push notification SDKs are initialized <strong>only after</strong> you have provided the applicable consent; if you decline, these services are not started. The advertising SDK starts in a restricted mode solely in order to present the consent form, and does not collect or transmit your advertising identifier, IP address or any other personal data until you have made your choice. If you decline, it continues to operate without personalized data and serves contextual ads only.</li>
+                        <li><strong>Withdrawing consent:</strong> You can reopen the consent form and change or withdraw any consent at any time via <strong>Settings > Privacy > Privacy Settings</strong>. Withdrawal takes effect immediately and does not affect the lawfulness of processing carried out before withdrawal.</li>
                         <li><strong>Data deletion:</strong> You can erase all data associated with you at any time from within the App via <strong>Settings > Privacy > Delete my data</strong> (see Section 6).</li>
                     </ul>
 
@@ -148,8 +150,10 @@
                                 <tr><td>App Usage Data</td><td>Scores, progress, features used, session duration</td><td>Analytics, app improvement</td><td>Consent</td></tr>
                                 <tr><td>App Progress</td><td>Achievements, in-app currency balance, preferences</td><td>Core functionality</td><td>Contract</td></tr>
                                 <tr><td>Crash Data</td><td>Crash logs, error reports, diagnostic data</td><td>Bug fixing, stability improvement</td><td>Legitimate Interest</td></tr>
-                                <tr><td>Advertising Data</td><td>Ad interactions, ad views, advertising identifiers</td><td>Displaying relevant ads</td><td>Consent</td></tr>
-                                <tr><td>Purchase Data</td><td>Transaction history, purchase timestamps</td><td>Processing in-app purchases</td><td>Contract</td></tr>
+                                <tr><td>Advertising Data</td><td>Ad interactions, ad views, video completions, advertising identifiers (GAID / IDFA), impression-level revenue data</td><td>Displaying relevant ads, ad measurement, ad fraud prevention</td><td>Consent</td></tr>
+                                <tr><td>Network Information</td><td><strong>IP address</strong>, mobile carrier and MCC-MNC, connection type, user agent</td><td>Ad delivery, coarse (country/region-level) targeting, fraud prevention</td><td>Consent (advertising) / Legitimate Interest (security)</td></tr>
+                                <tr><td>Pseudonymous App User ID</td><td>Randomly generated in-app identifier, not linked to your name, email address or any account</td><td>Ad measurement, revenue analytics, fraud prevention</td><td>Consent</td></tr>
+                                <tr><td>Purchase Data</td><td>Transaction history, purchase timestamps, product, price and currency</td><td>Processing in-app purchases; ad revenue measurement (shared with our advertising mediation provider only with your advertising consent)</td><td>Contract / Consent</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -165,6 +169,9 @@
                         <li>Biometric data</li>
                         <li>Contents of messages or communications</li>
                     </ul>
+                    <p class="text-gray-600 mb-6">
+                        <strong>Note on location:</strong> Our Apps do not declare or request Android or iOS location permissions. Because our advertising SDK can only access device location when the app itself holds a location permission, neither we nor our advertising partners receive GPS or other precise location data from our Apps. Advertising partners may nevertheless infer your approximate location (typically country or region) from your IP address.
+                    </p>
 
                     <!-- Section 3 -->
                     <h2 class="text-2xl font-bold text-gray-800 mb-4 mt-10">3. How We Use Your Information</h2>
@@ -197,10 +204,11 @@
 
                     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.4 Advertising (Legal Basis: Consent)</h3>
                     <ul class="list-disc list-inside text-gray-600 mb-4">
-                        <li>Displaying advertisements (for non-premium users)</li>
+                        <li>Displaying advertisements</li>
                         <li>Measuring ad performance</li>
                         <li>Providing personalized ads based on your interests (with your consent)</li>
                         <li>Serving contextual (non-personalized) ads (without consent)</li>
+                        <li>Detecting and preventing ad fraud and invalid traffic</li>
                     </ul>
 
                     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.5 Communications (Legal Basis: Consent)</h3>
@@ -213,8 +221,12 @@
                     <!-- Section 4 -->
                     <h2 class="text-2xl font-bold text-gray-800 mb-4 mt-10">4. Third-Party Services and Data Sharing</h2>
                     <p class="text-gray-600 mb-4">
-                        We use trusted third-party services to provide certain features. These services act as <strong>Data Processors</strong> on our behalf and process data according to our instructions and their own privacy policies.
+                        We use trusted third-party services to provide certain features. Their role under data protection law differs depending on the service:
                     </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        <li><strong>Analytics, crash reporting and messaging providers</strong> (Firebase, GameAnalytics, devtodev) act as <strong>Data Processors</strong> on our behalf and process data according to our instructions and their own privacy policies.</li>
+                        <li><strong>Advertising partners</strong> (Appodeal and the advertising networks it mediates) act as <strong>independent controllers</strong> — and in some cases as joint controllers with us — for the advertising data they receive. They determine their own purposes for that data under their own privacy policies, and beyond forwarding your consent choices to them we cannot control their processing. Advertising data is shared with them only after you have provided the applicable consent.</li>
+                    </ul>
 
                     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.1 Firebase (Google)</h3>
                     <div class="overflow-x-auto mb-4">
@@ -245,10 +257,9 @@
                         <strong>Apple Privacy:</strong> <a href="https://www.apple.com/legal/privacy/" class="text-indigo-600 hover:text-indigo-700" target="_blank">apple.com/legal/privacy</a>
                     </p>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.3 Google AdMob (Advertising)</h3>
-                    <p class="text-gray-600 mb-4">Advertisements shown to non-premium users are served through <strong>Google AdMob</strong>, our primary advertising system. AdMob delivers banner, rewarded, rewarded interstitial, interstitial, and app-open ad formats and collects advertising identifiers and device information for ad serving, frequency capping, and measurement.</p>
-                    <p class="text-gray-600 mb-4"><strong>Consent:</strong> For users in the European Economic Area, the United Kingdom, and Switzerland, we collect advertising consent through Google's <strong>User Messaging Platform (UMP)</strong> using the IAB Transparency &amp; Consent Framework (TCF v2) before any advertising data is collected. Without consent, only contextual (non-personalized) ads are shown.</p>
-                    <p class="text-gray-600 mb-4"><strong>Ad mediation:</strong> AdMob operates a mediation waterfall that may fill an ad request through additional advertising networks integrated as mediation partners. The mediation partners currently enabled are <strong>Unity Ads</strong>, <strong>ironSource</strong>, and <strong>Chartboost</strong>. When one of these partners fills an ad, it may collect advertising identifiers and device information under its own privacy policy. Your GDPR and U.S. state privacy choices are forwarded to these partners.</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.3 Appodeal (Advertising Mediation) and Advertising Partners</h3>
+                    <p class="text-gray-600 mb-4">Advertisements in our Apps are delivered through <strong>Appodeal</strong>, our advertising mediation platform, operated by <strong>Appodeal, Inc.</strong>, a Delaware corporation located at 575 Market St, 5th Floor, San Francisco, CA 94105, USA. Appodeal receives each ad request from the App and fills it through the advertising networks and demand partners connected to our account. We use banner, interstitial, rewarded video, rewarded interstitial, and app-open ad formats.</p>
+                    <p class="text-gray-600 mb-4"><strong>What is shared:</strong> In order to request, render, frequency-cap and measure ads, the Appodeal SDK and the advertising partner that fills the request receive your <strong>advertising identifier</strong>, your <strong>IP address</strong>, and technical device and network information. This data leaves your device and is processed by Appodeal and by that advertising partner under their own privacy policies.</p>
                     <div class="overflow-x-auto mb-4">
                         <table>
                             <thead>
@@ -258,19 +269,32 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>Advertising ID (GAID/IDFA)</td><td>Ad targeting and frequency capping</td></tr>
-                                <tr><td>Device information (model, OS, screen size)</td><td>Ad rendering and compatibility</td></tr>
-                                <tr><td>Ad interaction data (impressions, clicks, completions)</td><td>Ad performance measurement</td></tr>
+                                <tr><td>Advertising ID (GAID / IDFA)</td><td>Ad targeting, frequency capping, attribution</td></tr>
+                                <tr><td>IP address</td><td>Ad delivery, coarse (country / region-level) geo targeting, fraud prevention</td></tr>
+                                <tr><td>Device information (model, OS version, screen size, language, available memory and storage, user agent)</td><td>Ad rendering, compatibility, fraud prevention</td></tr>
+                                <tr><td>Network information (mobile carrier, MCC-MNC, connection type)</td><td>Ad delivery and formatting</td></tr>
+                                <tr><td>Ad interaction data (impressions, clicks, video completions, rewards)</td><td>Ad delivery and performance measurement</td></tr>
                                 <tr><td>Impression-level revenue data (ILRD)</td><td>Revenue analytics</td></tr>
+                                <tr><td>Pseudonymous app user identifier</td><td>Linking ad activity to an app installation for measurement, revenue analytics and fraud prevention</td></tr>
+                                <tr><td>In-app purchase events (product, price, currency, timestamp)</td><td>Ad targeting and ad revenue analytics</td></tr>
                             </tbody>
                         </table>
                     </div>
+                    <p class="text-gray-600 mb-4"><strong>User identifier and purchase events:</strong> Where this feature is enabled in the App, we pass a <em>pseudonymous</em>, app-generated user identifier and in-app purchase events to Appodeal so that ad performance and revenue can be measured and ad fraud detected. This identifier is not your name, email address, or any account credential, we do not use it to contact you, and it is not disclosed for any purpose other than advertising measurement. It is regenerated — and the previous value is disassociated from you — when you use <strong>Settings > Privacy > Delete my data</strong>.</p>
+                    <p class="text-gray-600 mb-4"><strong>Location:</strong> Our Apps do not declare or request location permissions, so neither Appodeal nor its advertising partners receive GPS or other precise location data from our Apps. They may infer your approximate location (typically country or region) from your IP address.</p>
+                    <p class="text-gray-600 mb-4"><strong>Consent:</strong> For users in the European Economic Area, the United Kingdom, and Switzerland, advertising consent is collected through the <strong>Stack Consent Manager</strong> included in the Appodeal SDK, which is built on Google's <strong>User Messaging Platform (UMP)</strong> and supports the IAB Transparency &amp; Consent Framework (TCF v2), before any advertising data is collected. Your TCF consent string is forwarded to every advertising vendor in the applicable vendor list. On iOS 14.5 and later, Apple's App Tracking Transparency prompt is shown before the IDFA is accessed. Without consent, only contextual (non-personalized) ads are shown. In the United States, your opt-out choice is transmitted to advertising partners using the IAB U.S. Privacy String / Global Privacy Platform.</p>
+                    <p class="text-gray-600 mb-4"><strong>Advertising partners:</strong> Appodeal fills ad requests through connected advertising networks and demand-side platforms participating in real-time bidding, including but not limited to <strong>Google AdMob</strong>, <strong>AppLovin</strong>, <strong>Unity Ads</strong>, <strong>ironSource</strong>, <strong>Meta Audience Network</strong>, <strong>Liftoff (Vungle)</strong>, and <strong>Amazon</strong>. Because bidding partners change over time, the authoritative and current list of Appodeal's advertising partners, together with their privacy policies, is published by Appodeal at the link below. Your GDPR and U.S. state privacy choices are forwarded to these partners.</p>
                     <p class="text-gray-600 mb-4">
-                        <strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" class="text-indigo-600 hover:text-indigo-700" target="_blank">policies.google.com/privacy</a><br>
-                        <strong>How Google Uses Advertising Data:</strong> <a href="https://policies.google.com/technologies/ads" class="text-indigo-600 hover:text-indigo-700" target="_blank">policies.google.com/technologies/ads</a><br>
-                        <strong>Unity Ads (mediation partner) Privacy Policy:</strong> <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" class="text-indigo-600 hover:text-indigo-700" target="_blank">unity.com/legal/game-player-and-app-user-privacy-policy</a><br>
-                        <strong>ironSource (mediation partner, a Unity company) Privacy Policy:</strong> <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" class="text-indigo-600 hover:text-indigo-700" target="_blank">unity.com/legal/game-player-and-app-user-privacy-policy</a><br>
-                        <strong>Chartboost (mediation partner, a LoopMe company) Privacy Policy:</strong> <a href="https://docs.chartboost.com/en/legal/privacy-policy/" class="text-indigo-600 hover:text-indigo-700" target="_blank">docs.chartboost.com/en/legal/privacy-policy</a>
+                        <strong>Appodeal Privacy Policy:</strong> <a href="https://appodeal.com/privacy-policy/" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">appodeal.com/privacy-policy</a><br>
+                        <strong>Appodeal Advertising Partners (full current list):</strong> <a href="https://www.appodeal.com/home/partners-privacy-policies/" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">appodeal.com/home/partners-privacy-policies</a><br>
+                        <strong>Appodeal SDK Opt-Out:</strong> <a href="https://appodeal.com/sdk-opt-out/" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">appodeal.com/sdk-opt-out</a><br>
+                        <strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">policies.google.com/privacy</a><br>
+                        <strong>How Google Uses Advertising Data:</strong> <a href="https://policies.google.com/technologies/ads" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">policies.google.com/technologies/ads</a><br>
+                        <strong>AppLovin Privacy Policy:</strong> <a href="https://www.applovin.com/privacy/" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">applovin.com/privacy</a><br>
+                        <strong>Unity Ads and ironSource (Unity) Privacy Policy:</strong> <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">unity.com/legal/game-player-and-app-user-privacy-policy</a><br>
+                        <strong>Meta Audience Network Privacy Policy:</strong> <a href="https://www.facebook.com/privacy/policy/" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">facebook.com/privacy/policy</a><br>
+                        <strong>Liftoff (Vungle) Privacy Policy:</strong> <a href="https://liftoff.ai/privacy-policy/" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">liftoff.ai/privacy-policy</a><br>
+                        <strong>Amazon Ads Privacy Notice:</strong> <a href="https://advertising.amazon.com/legal/privacy-notice" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">advertising.amazon.com/legal/privacy-notice</a>
                     </p>
 
                     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.4 GameAnalytics (Game Analytics)</h3>
@@ -317,11 +341,17 @@
                         <strong>devtodev Privacy Policy:</strong> <a href="https://www.devtodev.com/policy" class="text-indigo-600 hover:text-indigo-700" target="_blank">devtodev.com/policy</a>
                     </p>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.6 Data Sharing Summary</h3>
-                    <p class="text-gray-600 mb-4"><strong>We do NOT sell your personal information.</strong></p>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.6 Ad Revenue Measurement and Attribution</h3>
+                    <p class="text-gray-600 mb-4">The Appodeal SDK reports impression-level ad revenue (ILRD) back to the App. We forward this revenue data to our own analytics providers &mdash; Firebase Analytics, GameAnalytics and devtodev (Sections 4.1, 4.4 and 4.5) &mdash; so that we can measure how the App performs. No personal data beyond what is already described in this Section 4 is collected for this purpose.</p>
+                    <p class="text-gray-600 mb-4">Appodeal also offers optional integrations with third-party mobile attribution and user-acquisition providers (such as Meta, Adjust and AppsFlyer). <strong>We do not currently enable any of these integrations, and no data is sent to them.</strong> If we enable one in the future, we will update this Privacy Policy and name the provider before the integration goes live.</p>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.7 Data Sharing Summary</h3>
+                    <p class="text-gray-600 mb-4"><strong>We do not sell your personal information for money, and we never disclose your name, email address, or contact details to advertisers.</strong></p>
+                    <p class="text-gray-600 mb-4">However, if you consent to personalized advertising, we disclose your advertising identifier, IP address and ad interaction data to Appodeal and its advertising partners for cross-context behavioural advertising. Under the California Consumer Privacy Act (CCPA/CPRA) and comparable U.S. state privacy laws, this kind of disclosure is treated as a <strong>&ldquo;sale&rdquo;</strong> and/or <strong>&ldquo;sharing&rdquo;</strong> of personal information, even though we receive no money for the data itself. You can opt out at any time &mdash; see Section 6.3.</p>
                     <p class="text-gray-600 mb-4">We share data with third parties only:</p>
                     <ul class="list-disc list-inside text-gray-600 mb-6">
-                        <li>To provide services described above (Data Processors)</li>
+                        <li>To provide services described above (analytics, crash reporting and messaging providers acting as Data Processors)</li>
+                        <li>To deliver, cap and measure advertising, with your consent (advertising partners acting as independent controllers)</li>
                         <li>When required by law or legal process</li>
                         <li>To protect our rights, safety, and property</li>
                         <li>With your explicit consent</li>
@@ -346,7 +376,7 @@
                                 <tr><td>Crash reports</td><td>90 days</td><td>Automatic expiration</td></tr>
                                 <tr><td>Purchase records</td><td>As required by law (typically 7 years)</td><td>Legal retention requirement</td></tr>
                                 <tr><td>Push notification tokens</td><td>Until you disable notifications or delete the App</td><td>Device settings</td></tr>
-                                <tr><td>Advertising data</td><td>Per ad partner retention policies</td><td>See Google AdMob and mediated network (Unity Ads / ironSource / Chartboost) privacy policies</td></tr>
+                                <tr><td>Advertising data</td><td>Per advertising partner retention policies</td><td>See the Appodeal privacy policy and the privacy policies of the advertising partners listed in Section 4.3</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -369,8 +399,10 @@
                                 <tr><td><strong>Delete</strong> local data</td><td>Device Settings > Apps > Clear Data or uninstall</td></tr>
                                 <tr><td><strong>Opt-out</strong> of analytics</td><td>Settings > Privacy > toggle off Analytics</td></tr>
                                 <tr><td><strong>Opt-out</strong> of personalized ads</td><td>Settings > Privacy > toggle off Personalized Ads</td></tr>
+                                <tr><td><strong>Opt-out</strong> of the sale / sharing of personal information (U.S.)</td><td>Settings > Privacy > Do Not Sell or Share My Personal Information</td></tr>
                                 <tr><td><strong>Disable</strong> push notifications</td><td>Device Settings > Apps > Notifications</td></tr>
                                 <tr><td><strong>Change</strong> consent preferences</td><td>Settings > Privacy (at any time)</td></tr>
+                                <tr><td><strong>Withdraw</strong> advertising / analytics consent (EEA, UK, Switzerland)</td><td>Settings > Privacy > Privacy Settings (reopens the consent form)</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -384,17 +416,25 @@
                         <li>Right to Restrict Processing - Request limitation of data processing (30 days)</li>
                         <li>Right to Data Portability - Receive your data in a portable format (30 days)</li>
                         <li>Right to Object - Object to processing based on legitimate interests (30 days)</li>
-                        <li>Right to Withdraw Consent - Withdraw consent at any time (Immediate)</li>
+                        <li>Right to Withdraw Consent - Withdraw consent at any time via <strong>Settings > Privacy > Privacy Settings</strong>, which reopens the consent form (Immediate)</li>
                     </ul>
                     <p class="text-gray-600 mb-4">
                         <strong>To exercise your GDPR rights:</strong> Email us at <a href="mailto:olhoten.apps@gmail.com" class="text-indigo-600 hover:text-indigo-700">olhoten.apps@gmail.com</a> with "GDPR Request" in the subject line.
                     </p>
 
                     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">6.3 California Residents (CCPA/CPRA)</h3>
-                    <p class="text-gray-600 mb-4">California residents have rights under CCPA/CPRA including: Right to Know, Right to Delete, Right to Correct, Right to Opt-Out, Right to Non-Discrimination.</p>
-                    <p class="text-gray-600 mb-4"><strong>We do NOT sell your personal information.</strong></p>
+                    <p class="text-gray-600 mb-4">California residents have rights under CCPA/CPRA including: Right to Know, Right to Delete, Right to Correct, Right to Opt-Out of Sale or Sharing, Right to Limit Use of Sensitive Personal Information, and Right to Non-Discrimination. Residents of other U.S. states with comprehensive privacy laws (including Colorado, Connecticut, Virginia, Utah, Texas, Oregon and Montana) have comparable rights, including the right to opt out of targeted advertising.</p>
+                    <p class="text-gray-600 mb-4"><strong>Sale and sharing of personal information.</strong> We do not sell your personal information for money. However, when you consent to personalized advertising, we disclose your advertising identifier, IP address and ad interaction data to Appodeal and its advertising partners for cross-context behavioural advertising. Under CCPA/CPRA and comparable state laws this disclosure is treated as a &ldquo;sale&rdquo; and/or &ldquo;sharing&rdquo; of personal information. We do not knowingly sell or share the personal information of consumers under 16 years of age.</p>
+                    <p class="text-gray-600 mb-4"><strong>How to opt out of the sale or sharing of your personal information:</strong></p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4">
+                        <li><strong>In the App:</strong> <strong>Settings > Privacy > Do Not Sell or Share My Personal Information</strong>. This control is always available and requires no account.</li>
+                        <li><strong>In the App:</strong> turning off <strong>Settings > Privacy > Personalized Ads</strong> has the same effect.</li>
+                        <li><strong>On your device:</strong> Android &mdash; Settings > Google > Ads > Delete advertising ID; iOS &mdash; Settings > Privacy &amp; Security > Tracking.</li>
+                        <li><strong>Directly with Appodeal:</strong> <a href="https://appodeal.com/sdk-opt-out/" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">appodeal.com/sdk-opt-out</a>.</li>
+                        <li><strong>Opt-out preference signals:</strong> we honour Global Privacy Control (GPC) signals where they are technically transmitted to us.</li>
+                    </ul>
                     <p class="text-gray-600 mb-6">
-                        <strong>To submit a CCPA/CPRA request:</strong> Email us at <a href="mailto:olhoten.apps@gmail.com" class="text-indigo-600 hover:text-indigo-700">olhoten.apps@gmail.com</a> with "CCPA Request" in the subject line.
+                        <strong>To submit a CCPA/CPRA request:</strong> Email us at <a href="mailto:olhoten.apps@gmail.com" class="text-indigo-600 hover:text-indigo-700">olhoten.apps@gmail.com</a> with "CCPA Request" in the subject line. We will not discriminate against you for exercising any of these rights.
                     </p>
 
                     <!-- Section 7 -->
@@ -421,21 +461,26 @@
                     <!-- Section 9 -->
                     <h2 class="text-2xl font-bold text-gray-800 mb-4 mt-10">9. International Data Transfers</h2>
                     <p class="text-gray-600 mb-4">Your information may be transferred to and processed in countries other than your country of residence, including the United States.</p>
-                    <p class="text-gray-600 mb-6">We ensure appropriate safeguards for international transfers through Standard Contractual Clauses (SCCs), EU-US Data Privacy Framework, and Data Processing Agreements with all service providers.</p>
+                    <p class="text-gray-600 mb-4">In particular, our advertising mediation provider <strong>Appodeal, Inc.</strong> is established in the United States (San Francisco, California) and processes advertising data there and through its global network of advertising partners, which may be located outside the EEA and the United Kingdom.</p>
+                    <p class="text-gray-600 mb-6">We ensure appropriate safeguards for international transfers through Standard Contractual Clauses (SCCs), the EU-US Data Privacy Framework, and Data Processing Agreements with all service providers.</p>
 
                     <!-- Section 10 -->
                     <h2 class="text-2xl font-bold text-gray-800 mb-4 mt-10">10. Advertising and Tracking</h2>
-                    <p class="text-gray-600 mb-4">Non-premium users see advertisements in our Apps served through <strong>Google AdMob</strong>, with <strong>Unity Ads</strong>, <strong>ironSource</strong>, and <strong>Chartboost</strong> participating as AdMob mediation partners (see Section 4.3).</p>
+                    <p class="text-gray-600 mb-4">Advertisements in our Apps are delivered through the <strong>Appodeal</strong> mediation platform (Appodeal, Inc., USA), which fills ad requests through connected advertising networks and demand-side platforms such as Google AdMob, AppLovin, Unity Ads, ironSource, Meta Audience Network, Liftoff (Vungle) and Amazon (see Section 4.3 for the full description and the authoritative partner list).</p>
                     <p class="text-gray-600 mb-4"><strong>Ad personalization:</strong></p>
                     <ul class="list-disc list-inside text-gray-600 mb-4">
                         <li><strong>With consent:</strong> We show personalized ads based on your interests</li>
                         <li><strong>Without consent:</strong> You will see contextual (non-personalized) ads</li>
                     </ul>
-                    <p class="text-gray-600 mb-4"><strong>Premium subscribers</strong> do not see any advertisements.</p>
+                    <p class="text-gray-600 mb-4"><strong>App Tracking Transparency (iOS):</strong> On iOS 14.5 and later, the App presents Apple's App Tracking Transparency prompt through the Appodeal Stack Consent Manager before any tracking identifier (IDFA) is accessed. If you decline, the IDFA is not used and you will only see contextual ads.</p>
+                    <p class="text-gray-600 mb-4">No ad-removal purchase or premium subscription is currently offered. If we introduce one in the future, users who purchase it will not see advertisements.</p>
                     <p class="text-gray-600 mb-6">
-                        <strong>Opt-out of personalized ads:</strong><br>
-                        iOS: Settings > Privacy & Security > Tracking<br>
-                        Android: Settings > Google > Ads > Opt out of Ads Personalization
+                        <strong>Opt-out of personalized ads and of the sale / sharing of your data:</strong><br>
+                        In-App: Settings > Privacy > Personalized Ads<br>
+                        In-App (U.S.): Settings > Privacy > Do Not Sell or Share My Personal Information<br>
+                        iOS: Settings > Privacy &amp; Security > Tracking<br>
+                        Android: Settings > Google > Ads > Delete advertising ID / Opt out of Ads Personalization<br>
+                        Appodeal SDK opt-out: <a href="https://appodeal.com/sdk-opt-out/" class="text-indigo-600 hover:text-indigo-700" target="_blank" rel="noopener">appodeal.com/sdk-opt-out</a>
                     </p>
 
                     <!-- Section 11 -->
@@ -486,7 +531,7 @@
                             This Privacy Policy complies with GDPR, CCPA/CPRA, COPPA, LGPD, and other applicable privacy regulations.
                         </p>
                         <p class="text-gray-500 text-sm text-center mt-2">
-                            <strong>Version:</strong> 1.4 | <strong>Effective Date:</strong> July 26, 2026
+                            <strong>Version:</strong> 1.5 | <strong>Effective Date:</strong> September 3, 2026
                         </p>
                     </div>
 
